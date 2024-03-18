@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>What'sDensity and Density Test Questions</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('https://www.wikihow.com/images/thumb/9/93/Calculate-Volume-and-Density-Step-11.jpg/aid1971784-v4-728px-Calculate-Volume-and-Density-Step-11.jpg');
+  min-height: 100%;
+}
+
+/* Second image (portfolio) */
+.bgimg-2 {
+  background-image: url("data:image/jpeg;base64,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");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+.kilo {
+    color: red;
+  }  
+.gram {
+    color: green;
+  }
+  .other {
+    color: blue;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">LESSON</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> QUESTIONS</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> ANSWERS</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">QUESTIONS</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">ANSWERS</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">O.S.L</span>
+  </div>
+</div>
+<div class="w3-content w3-container w3-padding-64" id="home">
+  <h2 class="w3-center">Density</h2>
+  <p class="w3-center">The density of a substance is its mass per unit volume. It is typically measured in units like <em style="color: red;">kilograms per cubic meter (kg/m³)</em> or<em style="color: green;"> grams per cubic centimeter (g/cm³). </em></p>
+  <h3 class="w3-center" style="margin-top: 160px;">What is density</h3>
+  <p class="w3-center">Density is a measure of how much mass is contained in a given volume of a substance. It is calculated by <em style="color: red;
+  ">dividing the mass of the substance by its volume.</em> The important aspect of density is that it describes <strong>how tightly packed the particles or molecules of a substance are within a given space</strong>. Substances with high density have more mass packed into a smaller volume, while substances with low density have less mass spread out over a larger volume. This property is crucial in understanding the behavior of materials in various contexts, such as determining buoyancy in fluids, predicting the behavior of materials under pressure, and identifying substances based on their characteristic densities.</p>
+  <img class="w3-round w3-image w3-opacity w3-hover-opacity-off" src="https://www.cscscientific.com/hubfs/images/Blog%20Images/Density.jpg" alt="whats density" width=" 100%">
+  
+  <h2 class="w3-center" style="color: green; margin-top: 16px;">More details</h2>
+  <p class="w3-center" style="margin-top:25px;"><p>Density is a fundamental property of matter that describes how tightly packed the particles are within a substance. Here are some key details about density:<br></p>
+
+<p class="pas"><strong>1. Definition:</strong><br> Density is defined as the <em class="other">mass of a substance per unit volume.</em> Mathematically, it is expressed as:<br>
+   <img class="w3-round w3-image w3-opacity w3-hover-opacity-off" src="https://www.wikihow.com/images/thumb/9/93/Calculate-Volume-and-Density-Step-11.jpg/aid1971784-v4-728px-Calculate-Volume-and-Density-Step-11.jpg" alt="formula for density"> 
+   
+   </p>
+
+<p class="pas"><strong>2. Units:</strong><br> Density is typically measured in units such as <em class="kilo">kilograms per cubic meter (kg/m³)</em> or <em class="gram">grams per cubic centimeter (g/cm³)</em>. However, other units like <em class="other">pounds per cubic inch (lb/in³)</em> or <em class="other">ounces per cubic inch (oz/in³) are also used,</em> depending on the context.<br></p>
+
+<p class="pas"><strong>3. Importance:</strong><br> Density plays a crucial role in determining the behavior and properties of materials. It affects buoyancy, as objects with higher density sink in fluids while those with lower density float. Density also influences the mechanical properties of materials, such as strength and durability.<br></p>
+
+<p class="pas"><strong>4. Factors Affecting Density:</strong><br>
+   - Composition: Different substances have different densities due to variations in their molecular or atomic structures. For example, metals generally have higher densities than non-metals.<br>
+   - <em>Temperature and Pressure:</em> <em class="other">Density can change with temperature and pressure.</em> As temperature increases, most substances expand and become <em class="other">less dense,</em> while higher pressures typically <em class="other">increase density.</em><br>
+   -<em> Phase Changes:</em> Density can vary between different phases of the same substance (e.g., solid, liquid, gas). For instance, water is denser in its liquid form than in its solid (ice) or gaseous (vapor) forms.<br></p>
+
+<p class="pas"><strong>5. Measuring Density:</strong><br> Density can be measured using various techniques, such as:<br>
+   -<em> Direct Measurement:</em> Weighing a known volume of the substance and calculating density using the mass and volume values.<br>
+   -<em> Archimedes' Principle:</em> Submerging an object in a fluid and measuring the buoyant force to determine its volume and hence density.<br>
+   -<em> Hydrometers and Densitometers:</em> Instruments specifically designed to measure the density of liquids.<br></p>
+
+<p class="pas"><strong>6. Applications:</strong><br>
+   - <em>Engineering:</em> Density is critical in material selection and design, especially in fields like construction, aerospace, and automotive industries.<br>
+   -<em> Earth Sciences:</em> Density variations in the Earth's interior provide valuable information about its composition and structure.<br>
+   - <em>Chemistry:</em> Density is used in stoichiometry and concentration calculations, and it helps identify substances based on their characteristic densities.<br></p>
+
+<p class="pas">Understanding density provides insights into the behavior of substances under various conditions and is essential for numerous scientific and practical applications.</p></p> 
+
+ 
+  
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">QUESTIONS</h3>
+  <p class="w3-center"><strong>Here are some questions related to density that you can calculate:</strong></p>
+
+<p class="w3-center">1. What is the density of a cube with sides of length 5 cm and a mass of 100 g?</p>
+<p class="w3-center">2. If a cylinder has a mass of 250 grams and a radius of 3 cm with a height of 10 cm, what is its density?</p>
+<p class="w3-center">3. A rectangular prism has dimensions 8 cm x 4 cm x 6 cm and a mass of 480 grams. What is its density?</p>
+<p class="w3-center">4. How does the density of water change with temperature? Calculate the density of water at 10°C and 50°C.</p>
+<p class="w3-center">5. What is the density of air at sea level conditions (1 atm pressure, 0°C temperature)?</p>
+<p class="w3-center">6. If a substance has a density of 2.5 g/cm³ and a volume of 50 cm³, what is its mass?</p>
+<p class="w3-center">7. A sphere has a radius of 6 cm and a mass of 400 grams. What is its density?</p>
+<p class="w3-center">8. Compare the densities of aluminum (2.7 g/cm³) and iron (7.87 g/cm³). Which one is denser?</p>
+<p class="w3-center">9. How does the density of a gas change with pressure? Calculate the density of a gas at 2 atm pressure if its density at 1 atm pressure is 1.2 g/L.</p>
+<p class="w3-center">10. If a substance has a density of 0.8 g/mL and a volume of 250 mL, what is its mass?</p>
+ 
+  
+
+
+
+
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center">ANSWERS</h3>
+  <p class="w3-center"><em>Here are answers of the above questins.</em></p><br>
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">A.N.S.W.E.R</span>
+  </div>
+</div>
+  <p class="w3-center">Here are the answers to the questions:</p>
+
+<p class="w3-center">1. Density = mass / volume = 100 g / (5 cm * 5 cm * 5 cm) = 100 g / 125 cm³ = 0.8 g/cm³</p>
+
+<p class="w3-center">2. Density = mass / volume = 250 g / (π * 3 cm * 3 cm * 10 cm) = 250 g / (90π cm³) ≈ 0.88 g/cm³</p>
+
+<p class="w3-center">3. Density = mass / volume = 480 g / (8 cm * 4 cm * 6 cm) = 480 g / 192 cm³ = 2.5 g/cm³</p>
+
+<p class="w3-center">4. The density of water at 10°C is approximately 0.9998 g/cm³ and at 50°C is approximately 0.9584 g/cm³.</p>
+
+<p class="w3-center">5. The density of air at sea level conditions is approximately 1.225 kg/m³ (or 0.001225 g/cm³).</p>
+
+<p class="w3-center">6. Mass = density * volume = 2.5 g/cm³ * 50 cm³ = 125 g</p>
+
+<p class="w3-center">7. Density = mass / volume = 400 g / ((4/3) * π * 6 cm * 6 cm * 6 cm) ≈ 400 g / (288π cm³) ≈ 1.38 g/cm³</p>
+
+<p class="w3-center">8. Aluminum is denser than iron. The density of aluminum is 2.7 g/cm³ and the density of iron is 7.87 g/cm³.</p>
+
+<p class="w3-center">9. The density of the gas at 2 atm pressure would be 2.4 g/L. (Assuming the gas behaves ideally)</p>
+
+<p class="w3-center">10. Mass = density * volume = 0.8 g/mL * 250 mL = 200 g</p>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+ 
+  <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+ 
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        
+        
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: online.study.lesson99@gmail.com
+      </div>
+      
+    
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+   
+    
+    <a target="_blank" href="https://t.me/trytoworkhard"><i class="fa fa-telegram w3-hover-opacity"></i></a>
+   
+  </div>
+  <p>created by Mosa</a></p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
